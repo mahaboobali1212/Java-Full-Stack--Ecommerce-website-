@@ -1,0 +1,151 @@
+.cart-container {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 30px;
+}
+
+.cart-items {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.cart-item {
+  display: grid;
+  grid-template-columns: 100px 1fr 150px 100px 40px;
+  gap: 20px;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.cart-item:last-child {
+  border-bottom: none;
+}
+
+.cart-item-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.cart-item-details h3 {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.cart-item-category {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+}
+
+.cart-item-price {
+  color: #007bff;
+  font-weight: 600;
+}
+
+.cart-item-quantity {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+}
+
+.cart-item-quantity button {
+  width: 30px;
+  height: 30px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  font-size: 1.2rem;
+}
+
+.cart-item-quantity span {
+  font-weight: 600;
+  min-width: 30px;
+  text-align: center;
+}
+
+.cart-item-total {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  text-align: right;
+}
+
+.cart-item-remove {
+  width: 30px;
+  height: 30px;
+  background-color: #dc3545;
+  color: white;
+  border-radius: 50%;
+  font-size: 1rem;
+}
+
+.cart-summary {
+  background: white;
+  border-radius: 10px;
+  padding: 30px;
+  height: fit-content;
+  position: sticky;
+  top: 80px;
+}
+
+.cart-summary h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  color: #666;
+}
+
+.summary-total {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+  margin-top: 20px;
+  border-top: 2px solid #eee;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.cart-summary button,
+.cart-summary a {
+  width: 100%;
+  margin-top: 15px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+}
+
+@media (max-width: 968px) {
+  .cart-container {
+    grid-template-columns: 1fr;
+  }
+
+  .cart-summary {
+    position: static;
+  }
+
+  .cart-item {
+    grid-template-columns: 80px 1fr 40px;
+    gap: 15px;
+  }
+
+  .cart-item-quantity,
+  .cart-item-total {
+    grid-column: 2 / 3;
+  }
+
+  .cart-item-remove {
+    grid-column: 3 / 4;
+    grid-row: 1;
+  }
+}
